@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    tools:parentTag="android.widget.FrameLayout">
+
+    <TextView
+        android:id="@+id/enter_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@color/black"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.SurfGallery.EnterButton" />
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/white" />
+
+</merge>
