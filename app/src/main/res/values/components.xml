@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.SurfGallery.Components.Tf" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/gray_background_tf</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.SurfGallery.TfComponent</item>
+        <item name="android:textColorHint">@color/gray_text_label</item>
+        <item name="hintTextColor">@color/gray_text_label</item>
+        <item name="android:textAppearance">@style/TextAppearance.SurfGallery.InputTextTf</item>
+        <item name="boxStrokeColor">@drawable/box_color_selector</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="boxStrokeErrorColor">@color/red_error_text_label</item>
+        <item name="singleLine">true</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.SurfGallery.HelperTextTf</item>
+        <item name="errorIconDrawable">@null</item>
+    </style>
+
+    <style name="Widget.SurfGallery.Components.TfPassword" parent="Widget.SurfGallery.Components.Tf">
+        <item name="endIconMode">password_toggle</item>
+        <item name="endIconDrawable">@drawable/show_password_selector</item>
+    </style>
+
+    <style name="Widget.SurfGallery.Components.SnackBarTheme" parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@color/red_error</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="Widget.SurfGallery.Components.SnackBarTextViewTheme" parent="@style/Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.SurfGallery.Snack</item>
+    </style>
+
+</resources>

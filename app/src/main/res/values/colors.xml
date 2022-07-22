@@ -5,6 +5,8 @@
     <color name="red_error">#FFFF4545</color>
     <color name="red_error_text_label">#FFFF002E</color>
     <color name="gray_text_label">#FFB0B0B0</color>
+    <color name="gray_activation_indicator">#FFDFDFDF</color>
     <color name="gray_background">#FFF5F5F5</color>
+    <color name="gray_background_tf">#FFFBFBFB</color>
     <color name="gray_text_on_background">#FFB3B3B3</color>
 </resources>

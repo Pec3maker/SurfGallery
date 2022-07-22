@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "com.example.surfgallery";
+option java_multiple_files = true;
+
+message UserInformation {
+
+  string token = 1;
+  string id = 2;
+  string phone = 3;
+  string email = 4;
+  string firstName = 5;
+  string lastName = 6;
+  string avatar = 7;
+  string city = 8;
+  string about = 9;
+}
