@@ -15,4 +15,7 @@
     <string name="unknown_host_error_message">Отсутствует соединение с интернетом</string>
     <string name="invalid_credentials_error_message">Логин или пароль введен неправильно</string>
     <string name="user_is_disabled_error_message">Время активной сессии истекло</string>
+    <string name="bottom_nav_gallery_title">Главная</string>
+    <string name="bottom_nav_favorites_title">Избранное</string>
+    <string name="bottom_nav_profile_title">Профиль</string>
 </resources>

@@ -9,16 +9,44 @@
         android:id="@+id/loginFragment"
         android:name="com.example.surfgallery.ui.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_galleryFragment"
             app:destination="@id/galleryFragment"
             app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/galleryFragment" />
     </fragment>
     <fragment
         android:id="@+id/galleryFragment"
-        android:name="com.example.surfgallery.GalleryFragment"
+        android:name="com.example.surfgallery.ui.gallery.GalleryFragment"
         android:label="fragment_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_galleryFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_galleryFragment_to_pictureInfoFragment"
+            app:destination="@id/pictureInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.surfgallery.ui.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.surfgallery.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.surfgallery.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/pictureInfoFragment"
+        android:name="com.example.surfgallery.ui.pictureinfo.PictureInfoFragment"
+        android:label="fragment_picture_info"
+        tools:layout="@layout/fragment_picture_info" />
 </navigation>
