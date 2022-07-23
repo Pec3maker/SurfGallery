@@ -49,4 +49,13 @@
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">@color/red_error_text_label</item>
     </style>
+
+    <style name="TextAppearance.SurfGallery.BottomBarText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">10sp</item>
+        <item name="fontWeight">600</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
 </resources>
