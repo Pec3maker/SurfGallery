@@ -143,7 +143,9 @@ class LoginFragment : Fragment() {
                     extractedValue: String,
                     formattedValue: String
                 ) {
-                    viewModel.updateLogin(COUNTRY_CODE + (extractedValue))
+                    viewModel.updateLogin(
+                        if (extractedValue.isNotEmpty()) COUNTRY_CODE + extractedValue else EMPTY_STRING
+                    )
                 }
             }
         )
@@ -152,5 +154,6 @@ class LoginFragment : Fragment() {
     companion object {
         private const val COUNTRY_CODE = "+7"
         const val PHONE_MASK = "$COUNTRY_CODE ([000]) [000] [00] [00]"
+        const val EMPTY_STRING = ""
     }
 }
