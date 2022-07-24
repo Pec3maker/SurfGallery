@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.logoutEvent.collect {
-                    navController.popBackStack(R.id.nav_graph, false);
+                    navController.popBackStack(R.id.nav_graph, false)
                     navController.navigate(Screen.Authentication.route)
                 }
             }

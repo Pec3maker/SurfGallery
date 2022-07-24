@@ -35,4 +35,8 @@
     <string name="dialog_message">Вы точно хотите выйти из\nприложения?</string>
     <string name="dialog_accept_label">да, точно</string>
     <string name="logout_error_label">Не удалось выйти, попробуйте еще раз</string>
+    <string name="back_button">back button</string>
+    <string name="search_field_label">Поиск</string>
+    <string name="initial_search_state">Введите ваш запрос</string>
+    <string name="error_search_state">"По этому запросу нет результатов,\nпопробуйте другой запрос"</string>
 </resources>
