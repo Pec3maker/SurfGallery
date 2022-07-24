@@ -5,16 +5,21 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.151" />
         <entry key="app/src/main/res/drawable/box_color_selector.xml" value="0.248" />
+        <entry key="app/src/main/res/drawable/cursor.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/favorite_icon_selector.xml" value="0.1985" />
         <entry key="app/src/main/res/drawable/ic_bottom_bar_main.xml" value="0.168" />
+        <entry key="app/src/main/res/drawable/ic_clear.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/ic_eye_remove.xml" value="0.234" />
         <entry key="app/src/main/res/drawable/ic_eye_set.xml" value="0.234" />
         <entry key="app/src/main/res/drawable/ic_filled_like.xml" value="0.1985" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.151" />
         <entry key="app/src/main/res/drawable/ic_outlined_like.xml" value="0.1985" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_search_bar.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/ic_splash_icon.xml" value="0.151" />
         <entry key="app/src/main/res/drawable/ic_surf_image_login.xml" value="0.234" />
+        <entry key="app/src/main/res/drawable/rounded_edit_text.xml" value="0.1675" />
+        <entry key="app/src/main/res/drawable/search_color_selector.xml" value="0.1675" />
         <entry key="app/src/main/res/drawable/show_password_selector.xml" value="0.233" />
         <entry key="app/src/main/res/font/montserrat.xml" value="0.1703125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3609375" />
@@ -24,7 +29,7 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_picture_info.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25775909423828125" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.3277490234375" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.3050572549143145" />
         <entry key="app/src/main/res/layout/picture_item.xml" value="0.335" />
         <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.26614583333333336" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.25" />

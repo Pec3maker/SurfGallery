@@ -41,7 +41,11 @@
         android:id="@+id/searchFragment"
         android:name="com.example.surfgallery.ui.search.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_pictureInfoFragment"
+            app:destination="@id/pictureInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/pictureInfoFragment"
         android:name="com.example.surfgallery.ui.pictureinfo.PictureInfoFragment"

@@ -20,7 +20,8 @@ sealed class Screen(
 
     object Search : Screen(
         route = R.id.searchFragment,
-        action = R.id.action_galleryFragment_to_searchFragment
+        action = R.id.action_galleryFragment_to_searchFragment,
+        isBottomBarVisible = false
     )
 
     object PictureInfo : Screen(

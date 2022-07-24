@@ -1,4 +1,4 @@
-package com.example.surfgallery.ui.gallery
+package com.example.surfgallery.ui.common
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +10,8 @@ import com.example.surfgallery.databinding.PictureItemBinding
 import com.example.surfgallery.domain.models.Picture
 
 class PictureAdapter(
-    private val onItemClick: (String) -> Unit
+    private val onItemClick: (String) -> Unit,
+    private val onFavoriteClick: (Picture) -> Unit
 ) : RecyclerView.Adapter<PictureAdapter.PictureHolder>() {
 
     private var pictureList = emptyList<Picture>()
@@ -21,9 +22,13 @@ class PictureAdapter(
         fun bind(picture: Picture) = with(binding) {
             ivPicture.load(data = picture.photoUrl)
             tvPicture.text = picture.title
+            cbPicture.isChecked = picture.isInDatabase == true
 
             binding.ivPicture.setOnClickListener {
                 onItemClick(picture.id)
+            }
+            binding.cbPicture.setOnClickListener {
+                onFavoriteClick(picture)
             }
         }
     }

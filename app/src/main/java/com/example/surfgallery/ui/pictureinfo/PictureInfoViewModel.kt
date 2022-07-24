@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PictureInfoViewModel @Inject constructor(
-    private val galleryRepository: GalleryRepository
+    galleryRepository: GalleryRepository
 ) : ViewModel() {
 
     private val state = galleryRepository.pictures.value

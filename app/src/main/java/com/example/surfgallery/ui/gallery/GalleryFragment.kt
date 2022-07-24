@@ -15,6 +15,7 @@ import com.example.surfgallery.R
 import com.example.surfgallery.common.UiListState
 import com.example.surfgallery.databinding.FragmentGalleryBinding
 import com.example.surfgallery.navigation.Screen
+import com.example.surfgallery.ui.common.PictureAdapter
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -32,10 +33,14 @@ class GalleryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
-        adapter = PictureAdapter { id ->
-            val action = GalleryFragmentDirections.actionGalleryFragmentToPictureInfoFragment(id)
-            findNavController().navigate(action)
-        }
+        adapter = PictureAdapter(
+            onItemClick = { id ->
+                val action =
+                    GalleryFragmentDirections.actionGalleryFragmentToPictureInfoFragment(id)
+                findNavController().navigate(action)
+            },
+            onFavoriteClick = viewModel::onFavoriteClick
+        )
         return binding.root
     }
 
