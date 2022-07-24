@@ -1,9 +1,11 @@
 package com.example.surfgallery.ui.search
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -80,6 +82,16 @@ class SearchFragment : Fragment() {
             buttonClear.setOnClickListener {
                 tfSearchEdit.text.clear()
             }
+
+            rcView.setOnTouchListener(
+                View.OnTouchListener { v, event ->
+                    v.performClick()
+                    val imm =
+                        context?.getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+                    imm?.hideSoftInputFromWindow(rcView.windowToken, 0)
+                    false
+                }
+            )
         }
     }
 
