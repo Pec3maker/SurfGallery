@@ -34,4 +34,5 @@
     <string name="dialog_cancel_label">Нет</string>
     <string name="dialog_message">Вы точно хотите выйти из\nприложения?</string>
     <string name="dialog_accept_label">да, точно</string>
+    <string name="logout_error_label">Не удалось выйти, попробуйте еще раз</string>
 </resources>

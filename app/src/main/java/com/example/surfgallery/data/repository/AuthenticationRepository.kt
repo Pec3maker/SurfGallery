@@ -26,11 +26,7 @@ class AuthenticationRepository @Inject constructor(
     }
 
     suspend fun logout() {
-        try {
-            authenticationService.logout()
-        } catch (e: Exception) {
-
-        }
+        authenticationService.logout()
         clear()
     }
 
