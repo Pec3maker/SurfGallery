@@ -10,9 +10,11 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.example.surfgallery.R
 import com.example.surfgallery.common.UiState
 import com.example.surfgallery.databinding.FragmentLoginBinding
+import com.example.surfgallery.navigation.Screen
 import com.google.android.material.snackbar.Snackbar
 import com.redmadrobot.inputmask.MaskedTextChangedListener
 import com.redmadrobot.inputmask.MaskedTextChangedListener.Companion.installOn
@@ -42,6 +44,7 @@ class LoginFragment : Fragment() {
         observeSnackbarFlow()
         observeLoginErrorFlow()
         observePasswordErrorFlow()
+        observeOnLoginFlow()
         initLoginMask()
 
         binding.enterButton.setOnClickListener {
@@ -90,6 +93,16 @@ class LoginFragment : Fragment() {
                             tfPassword.error = getString(R.string.empty_string)
                         }
                     }
+                }
+            }
+        }
+    }
+
+    private fun observeOnLoginFlow() {
+        lifecycleScope.launch {
+            viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.onLogin.collect {
+                    findNavController().navigate(Screen.Gallery.action)
                 }
             }
         }

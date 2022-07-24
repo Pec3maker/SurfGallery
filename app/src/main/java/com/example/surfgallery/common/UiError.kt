@@ -57,5 +57,15 @@ sealed class UiError(
             } else {
                 common(exception)
             }
+
+        fun onGallery(exception: Throwable): UiError =
+            if (exception is HttpException) {
+                when (exception.code()) {
+                    401 -> UserIsDisabled
+                    else -> UnknownHostException
+                }
+            } else {
+                common(exception)
+            }
     }
 }

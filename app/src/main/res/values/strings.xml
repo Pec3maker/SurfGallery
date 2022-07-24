@@ -12,10 +12,17 @@
     <string name="empty_login_error_message">Поле не может быть пустым</string>
     <string name="wrong_password_length_error_message">Пароль должен быть от 6 до 255 символов</string>
     <string name="empty_password_error_message">Поле не может быть пустым</string>
-    <string name="unknown_host_error_message">Отсутствует соединение с интернетом</string>
+    <string name="unknown_host_error_message">Отсутствует интернет-соединение\nПопробуйте позже</string>
     <string name="invalid_credentials_error_message">Логин или пароль введен неправильно</string>
     <string name="user_is_disabled_error_message">Время активной сессии истекло</string>
     <string name="bottom_nav_gallery_title">Главная</string>
     <string name="bottom_nav_favorites_title">Избранное</string>
     <string name="bottom_nav_profile_title">Профиль</string>
+    <string name="gallery_title">Галерея</string>
+    <string name="search_button">search_button</string>
+    <string name="picture_item_desc">picture</string>
+    <string name="like_image_desc">like image</string>
+    <string name="update_button_label">Обновить</string>
+    <string name="error_icon">error icon</string>
+    <string name="login_error">Не удалось загрузить ленту\nОбновите экран или попробуйте позже</string>
 </resources>

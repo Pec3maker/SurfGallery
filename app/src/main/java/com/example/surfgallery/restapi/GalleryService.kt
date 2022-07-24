@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface GalleryService {
 
-    @GET("/picture")
-    suspend fun getPicture(): List<PictureResponse>
+    @GET("/api/picture")
+    suspend fun getPictures(): List<PictureResponse>
 }
