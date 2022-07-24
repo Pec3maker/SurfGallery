@@ -25,4 +25,14 @@
     <string name="update_button_label">Обновить</string>
     <string name="error_icon">error icon</string>
     <string name="login_error">Не удалось загрузить ленту\nОбновите экран или попробуйте позже</string>
+    <string name="profile_title">Профиль</string>
+    <string name="user_avatar">user avatar</string>
+    <string name="profile_town_label">Город</string>
+    <string name="profile_phone_label">Телефон</string>
+    <string name="profile_email_label">Почта</string>
+    <string name="profile_exit_button_label">Выйти</string>
+    <string name="dialog_cancel_label">Нет</string>
+    <string name="dialog_message">Вы точно хотите выйти из\nприложения?</string>
+    <string name="dialog_accept_label">да, точно</string>
+    <string name="logout_error_label">Не удалось выйти, попробуйте еще раз</string>
 </resources>

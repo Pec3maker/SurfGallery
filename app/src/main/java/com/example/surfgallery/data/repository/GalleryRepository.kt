@@ -22,8 +22,6 @@ class GalleryRepository @Inject constructor(
 
     private val _pictures = MutableStateFlow<UiListState<Picture>>(UiListState.Loading)
     val pictures: StateFlow<UiListState<Picture>> = _pictures
-    var loadedPictures: List<Picture> = emptyList()
-        private set
 
     init {
         getPictures()
@@ -34,11 +32,9 @@ class GalleryRepository @Inject constructor(
         job = scope.launch {
             _pictures.emit(UiListState.Loading)
             try {
-                loadedPictures = galleryService.getPictures().map { it.toPictureModel() }
                 _pictures.emit(
-                    UiListState.Success(loadedPictures)
-
-                    //todo match data
+                    UiListState.Success(galleryService.getPictures().map { it.toPictureModel() })
+                    //todo match data for gallery with db
                 )
             } catch (e: CancellationException) {
 

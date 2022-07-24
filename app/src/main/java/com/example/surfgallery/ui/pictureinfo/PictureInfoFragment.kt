@@ -45,10 +45,10 @@ class PictureInfoFragment : Fragment() {
     private fun bind() {
         val picture = viewModel.getPictureInfo(id = args.pictureId)
         with(binding) {
-            iv.load(picture.photoUrl)
-            tvTitle.text = picture.title
-            tvDate.text = picture.publicationDate.formatTimeStampToDate()
-            tvDescription.text = picture.content
+            iv.load(picture?.photoUrl)
+            tvTitle.text = picture?.title
+            tvDate.text = picture?.publicationDate?.formatTimeStampToDate()
+            tvDescription.text = picture?.content
         }
     }
 

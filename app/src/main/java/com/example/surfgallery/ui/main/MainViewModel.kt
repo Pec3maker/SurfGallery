@@ -1,6 +1,7 @@
 package com.example.surfgallery.ui.main
 
 import androidx.lifecycle.ViewModel
+import com.example.surfgallery.data.repository.AuthenticationRepository
 import com.example.surfgallery.data.repository.DataStoreRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
@@ -11,10 +12,12 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val dataStoreRepository: DataStoreRepository
+    private val dataStoreRepository: DataStoreRepository,
+    authenticationRepository: AuthenticationRepository
 ) : ViewModel() {
 
     private val _isLoading = MutableStateFlow(true)
+    val logoutEvent = authenticationRepository.logoutEvent
     val isLoading: StateFlow<Boolean> = _isLoading
 
     init {
