@@ -8,7 +8,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class DataStoreRepository @Inject constructor(
     private val dataStore: DataStore<UserInformation>,
     coroutineScope: CoroutineScope
@@ -27,19 +29,20 @@ class DataStoreRepository @Inject constructor(
     suspend fun saveUserPreferences(authInformation: AuthResponse?) =
         dataStore.updateData { preferences ->
             preferences.toBuilder()
-                .setToken(authInformation?.token)
-                .setId(authInformation?.userInfo?.id)
-                .setPhone(authInformation?.userInfo?.phone)
-                .setEmail(authInformation?.userInfo?.email)
-                .setFirstName(authInformation?.userInfo?.firstName)
-                .setLastName(authInformation?.userInfo?.lastName)
-                .setAvatar(authInformation?.userInfo?.avatar)
-                .setCity(authInformation?.userInfo?.city)
-                .setAbout(authInformation?.userInfo?.about)
+                .setToken(authInformation?.token ?: "")
+                .setId(authInformation?.userInfo?.id ?: "")
+                .setPhone(authInformation?.userInfo?.phone ?: "")
+                .setEmail(authInformation?.userInfo?.email ?: "")
+                .setFirstName(authInformation?.userInfo?.firstName ?: "")
+                .setLastName(authInformation?.userInfo?.lastName ?: "")
+                .setAvatar(authInformation?.userInfo?.avatar ?: "")
+                .setCity(authInformation?.userInfo?.city ?: "")
+                .setAbout(authInformation?.userInfo?.about ?: "")
                 .build()
         }
 
     suspend fun clear() {
+
         saveUserPreferences(authInformation = null)
     }
 }

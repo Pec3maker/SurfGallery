@@ -1,13 +1,12 @@
 package com.example.surfgallery.ui.main
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.surfgallery.R
 import com.example.surfgallery.databinding.ActivityMainBinding
@@ -39,6 +38,11 @@ class MainActivity : AppCompatActivity() {
     private fun configureBottomBar(navController: NavController) {
         val bottomNavigationView = binding.bottomNavigationView
         bottomNavigationView.setupWithNavController(navController = navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            bottomNavigationView.visibility =
+                if (Screen.fromRoute(destination.id).isBottomBarVisible) View.VISIBLE else View.GONE
+        }
     }
 
     private fun setStartDestination(
@@ -52,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             if (viewModel.isTokenContained()) {
                 Screen.Gallery.route
             } else {
-                Screen.Authentication.route
+                Screen.Authentication.action
             }
         )
         navController.graph = navGraph

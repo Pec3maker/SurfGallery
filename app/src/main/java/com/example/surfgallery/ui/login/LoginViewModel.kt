@@ -25,16 +25,19 @@ class LoginViewModel @Inject constructor(
     private var password: String = ""
 
     private val _uiState = MutableStateFlow<UiState<Unit>>(UiState.Success(Unit))
-    var uiState: StateFlow<UiState<Unit>> = _uiState
+    val uiState: StateFlow<UiState<Unit>> = _uiState
+
+    private val _onLogin = MutableSharedFlow<Unit>()
+    val onLogin: SharedFlow<Unit> = _onLogin
 
     private val _showSnackbar = MutableSharedFlow<Int>()
     val showSnackbar: SharedFlow<Int> = _showSnackbar
 
-    private var _loginErrorMessage = MutableSharedFlow<Int>()
-    var loginErrorMessage: SharedFlow<Int> = _loginErrorMessage
+    private val _loginErrorMessage = MutableSharedFlow<Int>()
+    val loginErrorMessage: SharedFlow<Int> = _loginErrorMessage
 
-    private var _passwordErrorMessage = MutableSharedFlow<Int>()
-    var passwordErrorMessage: SharedFlow<Int> = _passwordErrorMessage
+    private val _passwordErrorMessage = MutableSharedFlow<Int>()
+    val passwordErrorMessage: SharedFlow<Int> = _passwordErrorMessage
 
     fun updateLogin(login: String) {
         this.login = login
@@ -92,9 +95,7 @@ class LoginViewModel @Inject constructor(
 
                 try {
                     repository.login(login, password)
-//                    _onLogin.emit(
-//                        todo navigate gallery
-//                    )
+                    _onLogin.emit(Unit)
                 } catch (e: Exception) {
                     val error = UiError.onAuthentication(e)
                     if (error.snackbarMessageRes != null) {

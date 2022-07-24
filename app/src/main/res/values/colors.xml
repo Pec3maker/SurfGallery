@@ -9,4 +9,5 @@
     <color name="gray_background">#FFF5F5F5</color>
     <color name="gray_background_tf">#FFFBFBFB</color>
     <color name="gray_text_on_background">#FFB3B3B3</color>
+    <color name="transparent">#00000000</color>
 </resources>

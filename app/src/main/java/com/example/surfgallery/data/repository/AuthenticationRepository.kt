@@ -5,7 +5,9 @@ import com.example.surfgallery.restapi.AuthenticationService
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class AuthenticationRepository @Inject constructor(
     private val dataStoreRepository: DataStoreRepository,
     private val authenticationService: AuthenticationService
