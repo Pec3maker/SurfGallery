@@ -108,4 +108,44 @@
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="TextAppearance.SurfGallery.Name" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontWeight">500</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.SurfGallery.ProfileCaption" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontWeight">300</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/gray_text_on_background</item>
+    </style>
+
+    <style name="TextAppearance.SurfGallery.AdditionalInfoProfileTitle" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontWeight">400</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/gray_text_on_background</item>
+    </style>
+
+    <style name="TextAppearance.SurfGallery.AdditionalInfoProfileCaption" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontWeight">400</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

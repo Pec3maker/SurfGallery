@@ -5,6 +5,9 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -12,6 +15,7 @@ import com.example.surfgallery.R
 import com.example.surfgallery.databinding.ActivityMainBinding
 import com.example.surfgallery.navigation.Screen
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -33,6 +37,19 @@ class MainActivity : AppCompatActivity() {
 
         configureBottomBar(navController = navController)
         setStartDestination(navController = navController, navHostFragment = navHostFragment)
+        setOnLogoutEvent(navController = navController)
+
+    }
+
+    private fun setOnLogoutEvent(navController: NavController) {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.logoutEvent.collect {
+                    navController.popBackStack(R.id.nav_graph, false);
+                    navController.navigate(Screen.Authentication.route)
+                }
+            }
+        }
     }
 
     private fun configureBottomBar(navController: NavController) {
