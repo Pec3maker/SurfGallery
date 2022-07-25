@@ -39,4 +39,6 @@
     <string name="search_field_label">Поиск</string>
     <string name="initial_search_state">Введите ваш запрос</string>
     <string name="error_search_state">"По этому запросу нет результатов,\nпопробуйте другой запрос"</string>
+    <string name="favorites_title">Мои избранные</string>
+    <string name="empty_favorites">В избранном пусто</string>
 </resources>

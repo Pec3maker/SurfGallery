@@ -101,5 +101,4 @@
             android:textAppearance="@style/TextAppearance.SurfGallery.EmptyScreen" />
     </LinearLayout>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
