@@ -23,6 +23,7 @@ class GalleryRepository @Inject constructor(
     private var job: Job? = null
 
     private val _picturesFlow = MutableStateFlow(emptyList<PictureEntity>())
+    val picturesFlow: StateFlow<List<PictureEntity>> = _picturesFlow
 
     private val _pictures = MutableStateFlow<UiListState<Picture>>(UiListState.Loading)
     val pictures: StateFlow<UiListState<Picture>> = _pictures
